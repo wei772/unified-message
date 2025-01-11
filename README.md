@@ -42,6 +42,7 @@ curl --location --request POST "http://localhost:8080/api/message/send" ^
 ### 整洁架构
 
 ![整洁架构](clean_architecture.png)
+
 来源 Robert C. Martin 的《架构整洁之道》，详情查看第22章 整洁架构
 
 * 业务实体，业务核心包含应用的业务对象
