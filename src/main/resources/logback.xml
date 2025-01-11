@@ -1,0 +1,31 @@
+<!-- 文件名：src/main/resources/logback.xml 或 src/main/resources/logback-spring.xml -->
+<configuration>
+    <!-- 定义输出到控制台的Appender -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 设置编码格式 -->
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- 可根据需要添加其他Appender，例如文件Appender -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>log/app.log</file>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 全局日志级别设置为info，所有日志级别高于或等于info的信息都会被打印 -->
+    <root level="info">
+        <!-- 引用名为STDOUT的Appender -->
+        <appender-ref ref="STDOUT"/>
+    </root>
+    <!-- 将该File Appender应用到某个特定包或类 -->
+    <logger name="cn.garden.message.client.wecom" level="debug">
+        <!-- <appender-ref ref="FILE"/>-->
+    </logger>
+    <logger name="cn.garden.message.client.sms" level="debug">
+        <!-- <appender-ref ref="FILE"/>-->
+    </logger>
+</configuration>
