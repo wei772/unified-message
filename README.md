@@ -141,28 +141,3 @@ curl --location --request POST "http://localhost:8080/api/message/send" ^
     * 单元测试通过不保证基本功能正常
     * 但是能极大简化验收测试，一般是因为环境、IoC依赖等出现问题
     * 可以考虑用spring-test进行简单的验收测试
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
